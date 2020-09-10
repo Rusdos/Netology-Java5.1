@@ -62,10 +62,9 @@ class BonusServiceTest {
 
         long amount = -10000049;
         boolean registered = true;
-        long expected = -3000;
 
         long actual = service.calculate(amount, registered);
-        assertEquals(expected, actual);
+        assertTrue(actual > 0, "Сумма покупки не должна быть отрицательной");
 
     }
 
@@ -75,11 +74,9 @@ class BonusServiceTest {
 
         long amount = 0;
         boolean registered = true;
-        long expected = 0;
 
         long actual = service.calculate(amount, registered);
-        assertEquals(expected, actual);
-
+        assertTrue(actual > 0, "Сумма покупки должна быть больше нуля");
     }
 
 

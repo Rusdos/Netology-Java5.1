@@ -5,6 +5,7 @@ public class BonusService {
         long limit = 500;
         if (bonus > limit) {
             bonus = limit;
+
         }
 
         return bonus;
