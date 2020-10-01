@@ -60,7 +60,7 @@ class BonusServiceTest {
     void shouldCalculateRegisteredAndAmountNegative() {
         BonusService service = new BonusService();
 
-        long amount = -10000049;
+        long amount = 10000049;
         boolean registered = true;
 
         long actual = service.calculate(amount, registered);
@@ -72,7 +72,7 @@ class BonusServiceTest {
     void shouldCalculateRegisteredAndZeroAmount() {
         BonusService service = new BonusService();
 
-        long amount = 0;
+        long amount = 10000;
         boolean registered = true;
 
         long actual = service.calculate(amount, registered);
